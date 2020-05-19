@@ -2,7 +2,7 @@ import axios from "axios"
 
 const API = {
     googleSearch: function(search) {
-       return axios.get("http://localhost:3001/api/books/googlebooks/"+search)
+       return axios.get("/api/books/googlebooks/"+search)
     },
     getBooks: function() {
         return axios.get("/api/books");
