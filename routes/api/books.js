@@ -10,7 +10,5 @@ router.delete("/:id", booksController.remove)
 
 router.get("/googlebooks/:search", booksController.bookSearch)
 
-// const queryUrl = `https://www.googleapis.com/books/`v1/volumes?q=harry%20potter`
-
 
 module.exports = router

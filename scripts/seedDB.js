@@ -8,6 +8,7 @@ mongoose.connect(
     "mongodb://localhost/googlebooks",
 );
 
+
 const bookSeed = [
     {
         title: "The Dead Zone",
@@ -29,3 +30,4 @@ db.Books
         console.error(err);
         process.exit(1);
     });
+

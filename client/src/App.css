@@ -1,3 +1,12 @@
+h1 {
+  margin: 20px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #cef4f5;
+}
+
 .App {
   text-align: center;
 }
@@ -39,6 +48,24 @@
 
 .bookDescription {
   margin-top: 5px;
+}
+
+.searchInput {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.container {
+  border: 2px solid lightgray;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  background-color: #fffff4;
+}
+
+.bookImage {
+  margin-top: 15px;
 }
 
 #saveBtn {

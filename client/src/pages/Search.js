@@ -23,17 +23,26 @@ function Search() {
         })
     }
 
-    function saveBook() {
-        console.log()
-    }
+    function saveBook(book) {
+        API.saveBook({
+            title: book.volumeInfo.title,
+            authors: book.volumeInfo.authors,
+            description: book.volumeInfo.description,
+            image: book.volumeInfo.imageLinks.smallThumbnail,
+            link: book.volumeInfo.previewLink
+          }).then(console.log("saved!"))
+        }
+    
+
+    
 
     return (
         
         <div className="container">
-            <h1>Search for your Next Book!</h1>
-            <br />
+            <h1>Search for your Next Book</h1>
+            <hr />
             <form>
-                <input value={search} type="text" name="search" onChange={handleChange} />
+                <input className="searchInput" value={search} type="text" name="search" onChange={handleChange} />
                 <button onClick={handleClick}>Search</button>
 
 
@@ -48,13 +57,13 @@ function Search() {
                             </strong>
                             </div>
                             <div>
-                            <img src={book.volumeInfo.imageLinks.smallThumbnail} />
+                            <img className="bookImage" src={book.volumeInfo.imageLinks.smallThumbnail} />
                             </div>
                             <br />
                             <p className="bookDescription">
                                 {book.volumeInfo.description}
                             </p>
-                            <a href={book.volumeInfo.previewLink}>Preview Book</a>
+                            <a href={book.volumeInfo.previewLink}>Find on Google Books</a>
                             <br/>
                             <button id="saveBtn" type="primary" onClick={() => saveBook(book)}>Save Book</button>
                         </ListItem>
@@ -66,6 +75,6 @@ function Search() {
 
         </div>
     )
-}
+                    }
 
 export default Search
